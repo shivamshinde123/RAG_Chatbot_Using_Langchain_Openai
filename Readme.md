@@ -10,7 +10,6 @@ Run the following command in the command prompt to initiate the git operations
 
 ```
 git init
-
 ```
 
 **Step 2:**
@@ -19,7 +18,6 @@ Run the following command in the command promt to clone this repository
 
 ```
 https://github.com/shivamshinde123/RAG_Chatbot_Using_Langchain_Openai.git
-
 ```
 
 **Step 3:**
@@ -32,6 +30,5 @@ Run the following command in the command prompt to run the chatbot app
 
 ```
 streamlit run app.py
-
 ```
 
