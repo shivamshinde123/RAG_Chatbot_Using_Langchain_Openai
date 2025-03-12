@@ -101,10 +101,10 @@ if __name__ == "__main__":
                 split_document_texts = split_docs(chunk_size=1000, chunk_overlap=200, docs=pdf_file)
 
             with st.spinner("Create vector data store..."):
-                embeddings = create_embeddings(model_name="granite-embedding:30m")
+                embeddings = create_embeddings(model_name="text-embedding-ada-002")
                 st.session_state.db = create_vectorstores(split_document_texts, embeddings)
 
-            llm = create_llm(model_name="qwen2.5:0.5b")
+            llm = create_llm(model_name="gpt-3.5-turbo")
             prompt_template = """
                               Answer the following question based only on the provided context. 
                               Think step by step before providing a detailed answer. 
@@ -140,7 +140,6 @@ if __name__ == "__main__":
 
         if st.session_state.output:
             st.write(f"**Answer:** {st.session_state.output}")
-
 
 
 
